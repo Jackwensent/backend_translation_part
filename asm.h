@@ -252,6 +252,23 @@ int tot_asm_instructions;//总的汇编指令数
 
 bool occupied_reg[2][num_registers];
 
+/*汇编指令*/
+struct asm_instruction
+{
+	int num;//指令编号
+	int op;//指令类型
+	int Rd, Rs1, Rs2;//变量编号：目的，源1，源2
+	int imm;//偏移量
+	int label;//跳转标号、函数名对应编号
+	asm_instruction* next, * prev;
+	asm_instruction()
+	{
+		Rd = Rs1 = Rs2 = -1;
+		imm = 0;
+		next = NULL; prev = NULL;
+	}
+};
+
 
 /*函数*/
 void clear_occupied_reg();
