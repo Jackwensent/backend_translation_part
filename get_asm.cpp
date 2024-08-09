@@ -1661,8 +1661,6 @@ void get_asm()
 		}
 		gen_func_end(func);
 
-		/*peephole()窥孔优化，做好了可以放到这里*/ 
-
 		print_asm(func);//指令输出
 	}
 }
