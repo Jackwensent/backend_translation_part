@@ -1,4 +1,4 @@
-define i32 @cal() {
+define i32 @main() {
   %1 = alloca i32
   %2 = alloca i32
   %3 = alloca i32
