@@ -171,23 +171,6 @@ struct instruction
 	}
 };
 
-/*汇编指令*/
-struct asm_instruction
-{
-	int num;//指令编号
-	int op;//指令类型
-	int Rd, Rs1, Rs2;//变量编号：目的，源1，源2
-	int imm;//偏移量
-	int label;//跳转标号、函数名对应编号
-	asm_instruction* next, * prev;
-	asm_instruction()
-	{
-		Rd = Rs1 = Rs2 = -1;
-		imm = 0;
-		next = NULL; prev = NULL;
-	}
-};
-
 /*basic block*/
 struct basic_block
 {
