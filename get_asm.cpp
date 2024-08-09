@@ -1,7 +1,18 @@
 #include "riscv.h"
 #include "asm.h"
 using namespace std;
+/*
+编号：
+全局变量：G 函数：F 跳转标号：L
 
+溢出：
+Rd溢出->t0/ft0；Rs1溢出->t1/ft1；Rs2->t2/ft2
+
+立即数：
+超过12位:ra存储；
+>=2个，添加Rs1存储；
+浮点数，先存ra，再转存到Rs1、Rs2
+*/
 void clear_occupied_reg()
 {
 	for (int i = 0; i < num_registers; ++i)
