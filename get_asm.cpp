@@ -1626,7 +1626,6 @@ void get_asm()
 	clear_occupied_reg();
 	/*设置程序起点*/
 	printf("    .text\n");
-	//printf("    .global %s\n", ("F" + std::to_string(num_start_func)).c_str());
 	printf("    .global _start\n");
 	/*生成全局变量*/
 	variable_table* global_head = global;
